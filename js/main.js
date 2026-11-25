@@ -25,14 +25,7 @@
     { id: 'light', title: '빛이 공간의 인상을 결정하는 방식', text: '조명은 분위기뿐 아니라 업무와 관찰의 조건을 만듭니다. 용도별 조도와 눈부심, 색 표현을 함께 검토합니다.' },
     { id: 'material', title: '마감재를 선택하는 기준', text: '소재의 질감과 색뿐 아니라 청소, 내구성, 유지관리 조건을 함께 고려합니다.' }
   ];
-  /* 진행 단계 · 계약 */
-  var NO_PRECONTRACT_UNTIL = '2027년 5월';
-  var STEPS = [
-    { t: '상담', d: '현장과 필요한 조건을 확인합니다. 보통 이 단계에서 가계약을 하지만, ' + NO_PRECONTRACT_UNTIL + '까지는 가계약 없이 진행합니다.', tag: '가계약 없음' },
-    { t: '공간 기획 · 견적 제안', d: '공간 구성안과 공사 범위, 견적, 일정을 제안합니다.', tag: '가계약 없음' },
-    { t: '본계약', d: '제안 내용에 동의하시면 계약합니다. 공사 범위, 금액, 일정, 하자 대응 조건을 계약서에 적습니다.', tag: 'Contract' },
-    { t: '시공 · 품질 확인', d: '계약한 내용대로 시공하고, 마감 품질을 함께 확인합니다.', tag: '' }
-  ];
+  var STEPS = ['상담 및 현장 이해', '공간 기획 및 설계', '견적 및 일정 협의', '시공 및 품질 확인'];
 
   /* ---------- 조각 ---------- */
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -212,14 +205,11 @@
           return '<div><span class="num">' + pad(i + 1) + '</span><h3 class="t-xl">' + c.ko + '</h3><span class="label">' + c.en + '</span><p class="body">' + c.desc + '</p></div>';
         }).join('') +
       '</div></section>' +
-      '<section class="block"><h2 class="display d-3xl">Process &amp; contract.</h2>' +
-        '<p class="body lead">인테리어 계약은 보통 두 번에 나누어 맺습니다. 상담을 시작할 때 가계약을 하고, 공간 기획과 견적 제안을 받은 뒤 본계약을 합니다.</p>' +
-        '<div class="notice"><span class="label">Until May 2027</span>' +
-          '<p class="t-xl">' + NO_PRECONTRACT_UNTIL + '까지는 가계약 없이 상담과 견적을 진행합니다.</p>' +
-          '<p class="body">견적 제안을 받아본 뒤 본계약 여부를 결정하시면 됩니다.</p></div>' +
+      '<section class="block"><h2 class="display d-3xl">Our process.</h2>' +
         STEPS.map(function (s, i) {
-          return '<div class="rule step"><span class="label">Step ' + pad(i + 1) + '</span><div><h3 class="t-xl">' + s.t + '</h3><p class="body">' + s.d + '</p></div><span class="label">' + s.tag + '</span></div>';
+          return '<div class="rule"><span class="label">Step ' + pad(i + 1) + '</span><h3 class="t-xl">' + s + '</h3><span></span></div>';
         }).join('') +
+        '<p class="note">공사 범위, 추가 비용, 일정 및 하자 대응 조건은 계약 전 협의합니다.</p>' +
       '</section>' +
       cta();
   }
