@@ -403,14 +403,14 @@ window.PROJECTS = [
   "year": null,
   "photos": [
    {
-    "src": "images/works/dongsung/01.jpg",
-    "w": 889,
-    "h": 667
-   },
-   {
     "src": "images/works/dongsung/02.jpg",
     "w": 482,
     "h": 368
+   },
+   {
+    "src": "images/works/dongsung/01.jpg",
+    "w": 889,
+    "h": 667
    },
    {
     "src": "images/works/dongsung/03.jpg",
