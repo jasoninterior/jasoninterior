@@ -360,3 +360,14 @@ a.rule:hover { padding-left: 12px; }
   .site-footer { padding: 20px 14px; gap: 12px; }
   .site-footer .end { margin-left: 0; width: 100%; }
 }
+
+/* ---------- Journal article ---------- */
+.rule .label.sub { display: block; margin-top: 8px; }
+.split.article { grid-template-columns: 1fr 2fr; }
+.prose { max-width: 62ch; word-break: keep-all; }
+.prose p + p { margin-top: 22px; }
+.prose .lede { color: var(--text); }
+.prose .body { font-size: 16px; line-height: 1.8; }
+.prose .closing { font-size: clamp(18px, 1.6vw, 22px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.5; color: var(--text); padding-top: 28px; margin-top: 36px; border-top: 1px solid var(--line-strong); }
+.prose .back { display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; margin-top: 48px; }
+@media (max-width: 720px) { .split.article { grid-template-columns: 1fr; } }

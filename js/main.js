@@ -21,9 +21,27 @@
 
   /* ---------- 저널 (v03 내용) ---------- */
   var ARTICLES = [
-    { id: 'flow', title: '환자와 직원의 동선을 설계하는 방법', text: '의료 공간에서는 대기, 상담, 진료, 직원 이동의 접점을 먼저 파악합니다. 동선의 교차와 프라이버시를 검토하고 운영 방식에 맞춰 배치합니다.' },
-    { id: 'light', title: '빛이 공간의 인상을 결정하는 방식', text: '조명은 분위기뿐 아니라 업무와 관찰의 조건을 만듭니다. 용도별 조도와 눈부심, 색 표현을 함께 검토합니다.' },
-    { id: 'material', title: '마감재를 선택하는 기준', text: '소재의 질감과 색뿐 아니라 청소, 내구성, 유지관리 조건을 함께 고려합니다.' }
+    { id: 'flow', title: '환자와 직원의 동선을 설계하는 방법', en: 'Designing the Flow of Space.', body: [
+      '의료 공간의 설계에서 동선은 운영의 효율성과 사용자의 편의성을 결정하는 기본적인 요소입니다. 환자의 이동은 직관적이어야 하며, 의료진의 반복적인 움직임은 최소화되어야 합니다.',
+      '그러나 디자이너에게 동선은 단순히 이동 거리의 문제가 아닙니다. 공간에 진입하는 순간부터 머무르고 이동하며 경험하게 되는 시선의 변화, 공간의 개방감과 심리적 안정까지 고려해야 하는 설계의 영역입니다.',
+      '예를 들어 접수 공간은 진입과 동시에 인지할 수 있도록 배치하고, 대기 공간은 주요 이동 경로에서 벗어나도록 계획합니다. 의료진의 업무 동선은 자주 사용하는 공간을 중심으로 압축하며, 상담실은 출입구의 방향과 벽체의 구성을 통해 시각적·청각적 프라이버시를 확보합니다.',
+      '이 과정에서 벽체의 배치, 천장의 높이, 조명의 방향, 바닥재의 변화는 공간을 자연스럽게 인지하도록 돕는 건축적 장치가 됩니다.',
+      '동선 설계는 이동의 효율성을 확보하는 동시에 공간을 경험하는 순서를 디자인하는 일입니다.'
+    ] },
+    { id: 'light', title: '빛이 공간의 인상을 결정하는 방식', en: 'Light Defines the Atmosphere.', body: [
+      '조명의 기본적인 역할은 공간의 사용 목적에 필요한 시환경을 확보하는 것입니다. 적절한 조도와 눈부심의 제어, 색을 정확하게 인식할 수 있는 연색성은 조명 설계에서 우선적으로 고려해야 할 조건입니다.',
+      '디자이너는 이러한 기능적 조건을 바탕으로 빛이 공간의 형태와 재료, 사람의 감각에 어떠한 영향을 미치는지 살펴봅니다. 공간 전체를 균일하게 밝히는 것과 필요한 부분에 빛을 배치하는 것은 서로 다른 공간적 경험을 만들어냅니다.',
+      '대기 공간에서는 벽면과 천장에 반사되는 간접광을 활용해 부드러운 분위기를 형성하고, 진료 공간에서는 피부색과 상태를 정확하게 확인할 수 있도록 기능적인 조명을 별도로 계획합니다. 또한 재료의 질감을 강조할 때는 빛의 입사각을 조절하고, 공간의 깊이를 표현할 때는 밝음과 어두움의 관계를 설계합니다.',
+      '조명기구의 위치를 결정하기에 앞서 무엇을 드러내고 무엇을 절제할 것인지 판단하는 것이 중요합니다.',
+      '빛을 설계한다는 것은 밝기를 결정하는 것을 넘어 공간의 형태와 분위기, 시선의 방향을 결정하는 일입니다.'
+    ] },
+    { id: 'material', title: '마감재를 선택하는 기준', en: 'The Integrity of Materials.', body: [
+      '마감재의 선택은 공간의 사용 목적과 환경에 대한 이해에서 출발합니다. 내구성, 오염 저항성, 유지관리, 시공성은 공간의 수명과 사용 편의성을 결정하는 실질적인 조건입니다.',
+      '디자이너는 재료를 개별적인 색상이나 질감으로만 바라보지 않습니다. 서로 다른 재료가 만나는 관계, 빛에 반응하는 표면, 반복되는 모듈과 비례, 시간이 지나며 변화하는 물성까지 하나의 공간적 구성으로 해석합니다.',
+      '예를 들어 의료 공간에서는 반복적인 세척과 소독에 적합한 마감재를 우선적으로 선정하되, 사용 환경에 따라 서로 다른 재료를 적용합니다. 진료 공간에는 관리가 용이한 비다공성 표면을, 대기 공간에는 사용 조건에 적합한 질감과 온기를 가진 재료를 계획합니다. 서로 다른 재료라도 색조와 접합부, 줄눈의 정렬을 조율하면 공간 전체의 일관성을 유지할 수 있습니다.',
+      '실제 설계에서는 재료의 샘플을 조명 아래에서 비교하고, 접합 디테일과 시공 이후의 유지관리까지 검토해야 합니다.',
+      '좋은 재료를 선택하는 것과 재료를 잘 다루는 것은 다릅니다. 공간의 완성도는 그 차이에서 비롯됩니다.'
+    ] }
   ];
   var STEPS = ['상담 및 현장 확인', '공간 기획 및 설계', '견적 및 일정 협의', '시공 및 품질 확인', '유지관리'];
 
@@ -218,16 +236,23 @@
     return intro('04 — Journal', 'Notes on space.', '디자인과 공간 운영에 대한 인사이트.', photo('hopyeong', 0)) +
       '<section class="block">' +
         ARTICLES.map(function (a, i) {
-          return '<a class="rule" href="#article/' + a.id + '"><span class="label">Insight ' + pad(i + 1) + '</span><h3 class="t-xl">' + a.title + '</h3><span class="label">Read ↗</span></a>';
+          return '<a class="rule" href="#article/' + a.id + '"><span class="label">Journal ' + pad(i + 1) + '</span><div><h3 class="t-xl">' + a.title + '</h3><span class="label sub">' + a.en + '</span></div><span class="label">Read ↗</span></a>';
         }).join('') +
       '</section>';
   }
 
   function article(id) {
-    var a = ARTICLES.filter(function (x) { return x.id === id; })[0] || ARTICLES[0];
-    return intro('Journal / Insight', a.title, '', photo('lua-songdo', 4)) +
-      '<section class="block"><div class="split"><span class="label">Insight · Design</span>' +
-      '<div><p class="lede">' + a.text + '</p><p class="back"><a class="link" href="#journal">← Journal</a></p></div></div></section>' +
+    var n = 0;
+    ARTICLES.forEach(function (x, i) { if (x.id === id) n = i; });
+    var a = ARTICLES[n], next = ARTICLES[(n + 1) % ARTICLES.length];
+    var last = a.body.length - 1;
+    return intro('Journal ' + pad(n + 1), a.title, a.en, photo('lua-songdo', 4)) +
+      '<section class="block"><div class="split article"><span class="label">Journal ' + pad(n + 1) + ' · Design</span>' +
+      '<div class="prose">' +
+        a.body.map(function (t, i) { return '<p class="' + (i === 0 ? 'lede' : i === last ? 'closing' : 'body') + '">' + t + '</p>'; }).join('') +
+        '<p class="back"><a class="link" href="#journal">← Journal</a>' +
+        '<a class="link" href="#article/' + next.id + '">Next — ' + next.title + ' ↗</a></p>' +
+      '</div></div></section>' +
       cta();
   }
 
