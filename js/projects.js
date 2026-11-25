@@ -639,6 +639,50 @@ window.PROJECTS = [
   ]
  },
  {
+  "id": "jjielts",
+  "name": "JJIELTS",
+  "cat": "commercial",
+  "kind": "어학원",
+  "year": 2026,
+  "photos": [
+   {
+    "src": "images/works/jjielts/01.jpg",
+    "w": 1440,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/02.jpg",
+    "w": 1440,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/03.jpg",
+    "w": 1286,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/04.jpg",
+    "w": 1440,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/05.jpg",
+    "w": 1440,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/06.jpg",
+    "w": 1440,
+    "h": 1920
+   },
+   {
+    "src": "images/works/jjielts/07.jpg",
+    "w": 1440,
+    "h": 1920
+   }
+  ]
+ },
+ {
   "id": "spharos-jeju",
   "name": "제주 그랜드호텔 스파로스 충전소",
   "cat": "commercial",
