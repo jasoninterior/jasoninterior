@@ -646,37 +646,22 @@ window.PROJECTS = [
   "year": 2026,
   "photos": [
    {
-    "src": "images/works/jjielts/01.jpg",
+    "src": "images/works/jjielts/desk.jpg",
     "w": 1440,
     "h": 1920
    },
    {
-    "src": "images/works/jjielts/02.jpg",
+    "src": "images/works/jjielts/entrance.jpg",
     "w": 1440,
     "h": 1920
    },
    {
-    "src": "images/works/jjielts/03.jpg",
-    "w": 1286,
-    "h": 1920
-   },
-   {
-    "src": "images/works/jjielts/04.jpg",
+    "src": "images/works/jjielts/window.jpg",
     "w": 1440,
     "h": 1920
    },
    {
-    "src": "images/works/jjielts/05.jpg",
-    "w": 1440,
-    "h": 1920
-   },
-   {
-    "src": "images/works/jjielts/06.jpg",
-    "w": 1440,
-    "h": 1920
-   },
-   {
-    "src": "images/works/jjielts/07.jpg",
+    "src": "images/works/jjielts/corridor.jpg",
     "w": 1440,
     "h": 1920
    }
