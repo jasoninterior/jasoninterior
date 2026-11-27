@@ -335,13 +335,14 @@
     var mailto = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     if (d.get('_honey')) return; /* 스팸 봇 */
 
-    var btn = f.querySelector('button[type=submit]'), btnText = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Sending…';
-    status.style.color = '';
-    status.textContent = '전송 중입니다.';
+    /* 접수 완료를 바로 보여주고 전송은 뒤에서 계속한다 (전송 서비스 응답이 느릴 수 있음) */
+    f.reset();
+    status.style.color = '#fff';
+    status.textContent = '문의가 접수되었습니다. 확인 후 연락드리겠습니다.';
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
+      keepalive: true, /* 페이지를 떠나도 전송을 이어간다 */
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         _subject: subject, _template: 'table', _captcha: 'false',
@@ -351,15 +352,16 @@
     }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'failed');
-        f.reset();
-        status.style.color = '#fff';
-        status.textContent = '문의가 접수되었습니다. 확인 후 연락드리겠습니다.';
       })
       .catch(function () {
-        status.style.color = '#fff';
-        status.innerHTML = '전송하지 못했습니다. <a href="' + mailto.replace(/"/g, '%22') + '" style="text-decoration:underline">메일 앱으로 보내기</a> 또는 ' + EMAIL + ' 로 직접 보내주세요.';
-      })
-      .then(function () { btn.disabled = false; btn.textContent = btnText; });
+        /* 실패하면 입력 내용이 담긴 메일 링크로 다시 보낼 수 있게 안내 */
+        if (document.body.contains(status)) {
+          status.style.color = '#fff';
+          status.innerHTML = '죄송합니다. 방금 문의가 전송되지 않았습니다. <a href="' + mailto.replace(/"/g, '%22') + '" style="text-decoration:underline">메일 앱으로 보내기</a> 또는 ' + EMAIL + ' 로 직접 보내주세요.';
+        } else {
+          window.alert('방금 보내신 문의가 전송되지 않았습니다. ' + EMAIL + ' 로 직접 보내주세요.');
+        }
+      });
   });
 
   window.addEventListener('hashchange', render);
